@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My website</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="header"> 
+        <div class="container">
+            <nav>
+                <img src="background.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+                
+            </nav>
+            </nav>
+            
+            <div class="header-text">
+                <p> ABOKI THE WEB DESIGNER. </p>
+                <h1>Hello guys! i am <span>Kam</span> <br>Bilyamin from Bamenda, Cameroon</h1>
+                
+            </div>
+        </div>
+    </div>
+     <!-- ------------about------------ -->
+    <section class="musa.me">
+   
+<div id="About">
+    <div class="musa">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="background.jng.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    i am Kam Bilyamin Kpwa by name a year 2 student studying accounting amd finance in the university of Bamenda. This is my first web page which contains some information about myself.
+                    so actually i have always been curiuos to know more about technologies ie Ai, machine learning, cybersecurity, web developement, App developement, etc so that is actually what attracted me into the field of technology as a whole.   
+                    
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">experience</p>
+                    <p class="tab-links" onclick="opentab('education')">education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><b><h2>Web Developer</h2></b></span><br>Creating and developement of websites</li>                      
+                        <li><span><b>Web Designer</b></b></span><br>web App developement </li>
+                        <li><span><b>App Developement</b></span><br>Building android apps/IOS</li>
+                        <li><span><b>motorbikes</b></span><br>riding bikes.</li>
+                        <li><span><b>Accounting</b></span><br>Creation of bank accoutns, registering new members,dissolving of old members account.</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2017-2025</span><br>Riding of bikes</li>
+                        <li><span>2020-2025</span><br>internship programs</li>
+                        <li><span>2021-2022</span>introductory level into programming<br></li>                      
+                        <li><span>2022-2023</span><br>Building of games,start-up websites </li>
+                        <li><span>2024-2025</span><br>web developement, Creation of website</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2024-2025</span><br>web designingskills at lets talk tech</li>                      
+                        <li><span>2019-2021</span><br>Ordinary level certificate</li>
+                        <li><span>2022-2023</span><br>Advance level certificates</li>
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+    
+</body>
+</html>
